@@ -1,0 +1,17 @@
+#projectes {
+    margin-top: 30px;
+
+    .country {
+        text-transform: uppercase;
+    }
+
+    .row {
+        margin: 15px;
+    }
+
+    @media (min-width: 1500px) {
+        .container {
+            width: 1500px;
+        }
+    }
+}

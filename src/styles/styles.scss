@@ -1,0 +1,33 @@
+$fa-font-path: "../../node_modules/font-awesome/fonts";
+
+@import "colors";
+@import "bootstrap-variables";
+@import "proxima-nova";
+@import "fonts";
+
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+@import "../../node_modules/toastr/build/toastr.css";
+
+@import "buttons";
+@import "counter";
+@import "dropdown";
+@import "footer";
+@import "globals";
+@import "search";
+@import "status";
+@import "switch";
+@import "tabs";
+@import "toolbar";
+@import "views";
+
+@import "../common/components/navbar/navbar.component";
+@import "../projectes/components/projecte/projecte.component";
+@import "../projectes/components/projecte-modal/projecte-modal.component";
+@import "../presentacio/containers/presentacio-page/presentacio.component";
+@import "../projectes/containers/projectes-page/projectes.component";
+@import "../colaboradors/containers/colaboradors-page/colaboradors.component";
+@import "../finances/containers/finances-page/finances.component";
+@import "../festeamic/containers/festeamic-page/festeamic.component";
+
+@import "../app/containers/application/application.container";

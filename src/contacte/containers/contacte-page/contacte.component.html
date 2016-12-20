@@ -1,0 +1,44 @@
+<default-page>
+    <main>
+        <section id="festeamic">
+            <h1>CONTACTAR</h1>
+            <div class="row">
+                <div class="col-md-8">
+                    <form [formGroup]="contacteForm" (ngSubmit)="onSubmit(contacteForm.value)">
+                        <div class="form-group" [ngClass]="{
+                            'has-danger':!contacteForm.controls['nom'].valid && contacteForm.controls['nom'].touched,
+                            'has-success': contacteForm.controls['nom'].touched && contacteForm.controls['nom'].valid
+                        }">
+                            <input formControlName="nom" type="text" class="form-control" id="nom" placeholder="Nom"
+                            [ngClass]="{'form-control-success': contacteForm.controls['nom'].touched && contacteForm.controls['nom'].valid,
+                            'form-control-danger': contacteForm.controls['nom'].touched && !contacteForm.controls['nom'].valid}">
+                        </div>
+                        <div class="form-group" [ngClass]="{
+                            'has-danger':!contacteForm.controls['email'].valid && contacteForm.controls['email'].touched,
+                            'has-success': contacteForm.controls['email'].touched && contacteForm.controls['email'].valid
+                        }">
+                            <input formControlName="email" type="email" class="form-control" id="email" placeholder="Adreça electrònica" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                            [ngClass]="{'form-control-success': contacteForm.controls['email'].touched && contacteForm.controls['email'].valid,
+                            'form-control-danger': contacteForm.controls['email'].touched && !contacteForm.controls['email'].valid}">
+                            <div class="form-control-feedback" *ngIf="!contacteForm.controls['email'].valid && contacteForm.controls['email'].touched">Aquest email no és vàlid, sisplau revisa les teves dades.</div>
+                        </div>
+                        <div class="form-group" [ngClass]="{
+                            'has-danger':!contacteForm.controls['message'].valid && contacteForm.controls['message'].touched,
+                            'has-success': contacteForm.controls['message'].touched && contacteForm.controls['message'].valid
+                        }">
+                            <textarea formControlName="message" type="text" class="form-control" id="message" placeholder="Missage" maxlength="250" rows="7"
+                            [ngClass]="{'form-control-success': contacteForm.controls['message'].touched && contacteForm.controls['message'].valid,
+                            'form-control-danger': contacteForm.controls['message'].touched && !contacteForm.controls['message'].valid}"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary float-xs-right" [disabled]="!contacteForm.valid">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <img src="images/contacte/caminsong.jpg" >
+                </div>
+            </div>
+        </section>
+    </main>
+</default-page>

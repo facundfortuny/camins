@@ -1,0 +1,185 @@
+$card-padding: .75rem;
+
+@mixin view-item-cell($vertical-padding: 1rem) {
+    display: table-cell;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    padding-top: $vertical-padding;
+    padding-bottom: $vertical-padding;
+    vertical-align: top;
+}
+
+/**
+ * Card View
+ */
+.view-cards {
+    @include make-row();
+
+    .view-item-container {
+        @include make-col-ready();
+        @include make-col(12);
+        @include media-breakpoint-up(xs) {
+            @include make-col(6);
+        }
+        @include media-breakpoint-up(md) {
+            @include make-col(4);
+        }
+        @include media-breakpoint-up(xl) {
+            @include make-col(3);
+        }
+        @include media-breakpoint-up(xxl) {
+            @include make-col(2);
+        }
+    }
+
+    .view-item {
+        background-color: $white-alabaster;
+        box-shadow: 0 .0625rem .1875rem 0 rgba(0,0,0,.15);
+        display: block;
+        float: left;
+        margin-bottom: 2rem;
+        position: relative;
+        width: 100%;
+        @include border-radius($border-radius);
+        color: $white-alabaster;
+
+        .view-item-image {
+            height: 12rem;
+            @include border-top-radius($border-radius);
+        }
+
+        .view-item-info {
+            background-image: linear-gradient(0deg, $gray-tuna 0%, rgba($gray-tuna,.0) 50%);
+            background-color: rgba($gray-tuna,.6);
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 12rem;
+            @include border-top-radius($border-radius);
+
+            .view-item-title {
+                font-size: 1.125rem;
+                line-height: 1.25rem;
+                position: absolute;
+                bottom: 1.7rem;
+                left: ($card-padding * 2);
+                right: ($card-padding * 2);
+                white-space: normal;
+
+                a.view-item-link {
+                    color: currentColor;
+                    white-space: normal;
+
+                    &:hover,
+                    &:focus {
+                        color: currentColor;
+                    }
+                }
+            }
+        }
+
+        .view-item-dates {
+            color: $gray-ghost;
+            position: absolute;
+            top: 10rem;
+            left: ($card-padding * 2);
+
+            .view-item-date-end {
+                font-size: .8125rem;
+                line-height: 1rem;
+
+                &:before {
+                    content: 'Ends ';
+                }
+            }
+
+            .view-item-date-days-left {
+                display: none;
+            }
+        }
+
+        .view-item-details {
+            padding: $card-padding;
+            @include border-bottom-radius($border-radius);
+
+            .view-item-title {
+                @include text-truncate();
+            }
+
+            .view-item-row {
+                padding-left: $card-padding;
+                padding-right: $card-padding;
+            }
+        }
+    }
+}
+
+/**
+* Table View
+*/
+.view-table {
+    box-shadow: 0 .0625rem .1875rem 0 rgba(0,0,0,.15);
+    margin-bottom: 2rem;
+    width: 100%;
+
+    .view-item-container {
+        border-bottom: $border-width solid $gray-mystic;
+        position: relative;
+
+        .view-item {
+            background-color: $white-alabaster;
+            display: table;
+            position: relative;
+            width: 100%;
+
+            .view-item-dates {
+                .view-item-date-days-left {
+                    color: $text-muted;
+                    font-size: .8125rem;
+                    line-height: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.view-table, .view-item-header-row {
+    .view-item-image {
+        @include view-item-cell;
+        width: 8rem;
+        padding: 0;
+    }
+
+    .view-item-info {
+        @include view-item-cell;
+        padding-left: 2rem;
+        position: relative;
+    }
+
+    .view-item-dates {
+        @include view-item-cell;
+        width: 11%;
+
+        @include media-breakpoint-up(xxl) {
+            width: 8%;
+        }
+    }
+}
+
+.view-item-header-row {
+    color: $gray-regent;
+    display: table;
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    position: relative;
+    width: 100%;
+}
+
+.cover-image {
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

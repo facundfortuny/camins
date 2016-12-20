@@ -1,0 +1,59 @@
+// Fix line-heights for small buttons to match height of regular buttons
+.btn {
+     color: white;
+     background-color: $brand-red;
+     border-color: $brand-red;
+}
+.btn-primary {
+    color: white;
+    background-color: $brand-red;
+    border-color: $brand-red;
+}
+
+.btn-primary:hover {
+    color: $brand-red;
+    background-color: white;
+    border-color: $brand-red;
+}
+
+.btn-sm {
+    line-height: 1.2857142857;
+}
+
+// Gray link buttons
+.btn-link-gray {
+    color: $gray-regent;
+    background-color: transparent;
+    border-color: transparent;
+
+    &,
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+
+    &:disabled {
+        opacity: .4;
+    }
+
+    &:hover:not([disabled]),
+    &:focus:not([disabled]),
+    .dropdown.open &:not([disabled]) {
+        background-color: $gray-mystic;
+        color: $gray-slate;
+    }
+}
+
+// Gray button bar
+.btn-bar .btn {
+    color: $gray-regent;
+
+    &:hover,
+    &:focus {
+        color: $gray-slate;
+    }
+
+    &.active {
+        color: $gray-shark;
+    }
+}

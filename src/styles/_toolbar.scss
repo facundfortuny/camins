@@ -1,0 +1,20 @@
+list-toolbar {
+    @include clearfix();
+    clear: both;
+    margin-bottom: 1rem;
+    display: block;
+
+    .search {
+        @include media-breakpoint-down(xs) {
+            width: 8rem;
+        }
+    }
+
+    .toggle-switch {
+        padding-top: .375rem;
+    }
+
+    .pagination-page {
+        margin-left: 1rem;
+    }
+}

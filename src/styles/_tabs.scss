@@ -1,0 +1,59 @@
+.nav-tabs {
+    border-bottom-style: none;
+
+    .nav-item {
+        margin-bottom: 0;
+
+        & + .nav-item {
+            margin-left: 0;
+        }
+    }
+
+    .nav-link {
+        border-style: none;
+        border-radius: 0;
+        font-size: .75rem;
+        font-weight: 600;
+        line-height: 1.25rem;
+        text-transform: uppercase;
+        padding: .625rem 1rem;
+
+        &:hover,
+        &:focus {
+            background-color: $white-catskill;
+        }
+
+        &.active {
+            background-color: initial;
+            position: relative;
+
+            &:after {
+                content: '';
+                background-color: $green-base;
+                height: .1875rem;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+
+    .tab-icon {
+        display: none;
+        font-size: 14px;
+    }
+
+    .nav-item.dropdown > .nav-link {
+        font-size: 18px;
+        line-height: 1.1111111111;
+
+        .fa {
+            vertical-align: top;
+        }
+    }
+
+    .dropdown-menu {
+        margin-top: 0;
+    }
+}

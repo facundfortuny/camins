@@ -1,0 +1,16 @@
+<default-page>
+    <main>
+        <section id="projectes">
+            <h1>Projectes</h1>
+            <div class="container">
+                <div *ngFor="let project of arrayProjects" class="row">
+                    <h2 class="country">{{project.country}}</h2>
+                    <div *ngFor="let pro of project.list" >
+                        <projecte [project]="pro"></projecte>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+</default-page>

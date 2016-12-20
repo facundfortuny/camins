@@ -1,0 +1,64 @@
+body {
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-family:"Open Sans",Helvetica,Arial,sans-serif;
+    font-size:14px;
+    line-height:22px;
+    color: $brand-grey;
+}
+
+h1, .h1 {
+	color: $brand-red;
+	font-family: 'Concert One', Arial,sans-serif;
+    font-size:40px;
+    line-height:1;
+    margin-bottom: 18px;
+}
+
+h2, .h2 {
+	font-family: 'Concert One',Arial,sans-serif;
+	font-size:28px;
+}
+
+h3, .h3 {
+    line-height: 1.3333333333;
+}
+
+h4, .h4 {
+	color:#666666;
+    font-family: 'Concert One',Arial,sans-serif;
+    font-size:25px;
+}
+
+h5, .h5 {
+    line-height: 1.4285714286;
+}
+
+h6, .h6 {
+    line-height: 1.3333333333;
+}
+
+
+.breadcrumb {
+    font-size: .8125rem;
+    line-height: 1rem;
+    margin-bottom: .25rem;
+}
+
+// Create button on page header
+.btns-right {
+    float: right;
+
+    .btn {
+        float: right;
+        margin-left: .5rem;
+    }
+}
+
+a {
+    color: $brand-red;
+    text-decoration: none;
+}
+
+section {
+    margin-top: 30px;
+}

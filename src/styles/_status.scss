@@ -1,0 +1,40 @@
+@mixin status($color) {
+    background-color: $color;
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+}
+
+// Status indicator in fade dropdown menu
+.status-dropdown {
+    .dropdown-menu {
+        .dropdown-item-status-build:before {
+            @include status($yellow-base);
+        }
+        .dropdown-item-status-pending:before {
+            @include status($orange-base);
+        }
+        .dropdown-item-status-live:before {
+            @include status($blue-base);
+        }
+        .dropdown-item-status-paused:before {
+            @include status($red-base);
+        }
+        .dropdown-item-status-finished:before {
+            @include status($green-base);
+        }
+
+        .dropdown-item-status:before {
+            display: inline-block;
+            margin-right: .25rem;
+            position: static;
+            width: .75rem;
+            height: .75rem;
+            @include border-radius();
+        }
+    }
+}

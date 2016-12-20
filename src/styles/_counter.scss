@@ -1,0 +1,24 @@
+.counter {
+    border: $border-width solid $gray-regent;
+    color: $gray-regent;
+    display: inline-block;
+    font-size: .75rem;
+    line-height: 1.25;
+    padding: 0 .4375rem;
+    white-space: nowrap;
+    @include border-radius(4em);
+    vertical-align: middle;
+}
+
+.dropdown-menu {
+    .menu-counter {
+        position: absolute;
+        right: 1rem;
+        margin: .25rem 0;
+    }
+
+    .active .menu-counter {
+        border-color: inherit;
+        color: inherit;
+    }
+}

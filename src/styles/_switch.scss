@@ -1,0 +1,45 @@
+.toggle-switch > input[type="checkbox"] {
+    display: none;
+}
+
+.toggle-switch > label {
+    cursor: pointer;
+    height: 0;
+    position: relative;
+    width: 2.5rem;
+}
+
+.toggle-switch > label::before {
+    background: darken($gray-ghost, 10%);
+    border-radius: .5rem;
+    content: '';
+    height: 1rem;
+    margin-top: -.5rem;
+    position: absolute;
+    transition: all 150ms ease-out;
+    width: 2.5rem;
+}
+.toggle-switch > label::after {
+    @include fa-icon();
+    background: $gray-ghost;
+    border-radius: 1rem;
+    color: $white-alabaster;
+    content: "\f005";
+    font-size: .875rem;
+    height: 1.5rem;
+    left: -.25rem;
+    margin-top: -.5rem;
+    padding: .3125rem;
+    position: absolute;
+    text-align: center;
+    top: -.25rem;
+    transition: all 150ms ease-out;
+    width: 1.5rem;
+}
+.toggle-switch > input[type="checkbox"]:checked + label::before {
+    background-color: darken($yellow-base, 10%);
+}
+.toggle-switch > input[type="checkbox"]:checked + label::after {
+    background-color: $yellow-base;
+    left: 1.25rem;
+}

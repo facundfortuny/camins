@@ -1,0 +1,20 @@
+footer {
+    color: $gray-regent;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    margin-top: 2rem;
+    padding: .5rem;
+
+    a {
+        color: inherit;
+
+        &:hover,
+        &:focus {
+            color: darken($gray-regent, 10%);
+        }
+    }
+
+    .nav-link {
+        margin-left: 1rem;
+    }
+}

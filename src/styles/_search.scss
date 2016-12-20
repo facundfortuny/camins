@@ -1,0 +1,20 @@
+.search {
+    margin-bottom: 0;
+    position: relative;
+
+    .search-icon {
+        color: $gray-regent;
+        margin-bottom: 0;
+        position: absolute;
+        top: 50%;
+        left: .75rem;
+        transform: translateY(-50%);
+    }
+
+    .search-control {
+        max-width: 100%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        width: 16rem;
+    }
+}

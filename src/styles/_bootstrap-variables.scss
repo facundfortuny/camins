@@ -1,0 +1,137 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+$border-width:              1px;
+
+$body-bg:                   $white-catskill;
+$body-color:                $gray-shark;
+
+$gray-dark:                 $gray-tuna;
+$gray:                      $gray-slate;
+$gray-light:                $gray-regent;
+$gray-lighter:              $white-catskill;
+$gray-lightest:             $white-alabaster;
+
+$brand-primary:             $brand-red;
+$brand-success:             $green-base;
+$brand-info:                $cyan-base;
+$brand-warning:             $orange-base;
+$brand-danger:              $red-base;
+
+$enable-flex:               false;
+$enable-rounded:            true;
+$enable-shadows:            false;
+$enable-gradients:          false;
+$enable-transitions:        false;
+$enable-hover-media-query:  false;
+$enable-grid-classes:       true;
+$enable-print-styles:       true;
+
+$grid-gutter-width:    24px;
+
+$grid-breakpoints: (
+    xxs: 544px,
+    xs: 768px,
+    sm: 1024px,
+    md: 1024px + 250px,
+    lg: 1280px + 250px,
+    xl: 1280px,
+    xxl: 1280px
+);
+
+$container-max-widths: (
+    sm: 768px - ($grid-gutter-width * 2),
+    md: 1024px - ($grid-gutter-width * 2),
+    lg: 1200px - ($grid-gutter-width * 2),
+    xl: 1200px - ($grid-gutter-width * 2),
+    xxl: 1200px - ($grid-gutter-width * 2)
+);
+
+$font-size-root:            14px;
+$font-size-base:            1rem;
+
+$font-family-sans-serif:    "Open Sans", sans-serif;
+
+$font-size-h1:              1.5rem;
+$font-size-h2:              1.25rem;
+$font-size-h3:              1.125rem;
+$font-size-h4:              1rem;
+$font-size-h5:              .875rem;
+$font-size-h6:              .8125rem;
+
+$headings-font-weight:      600;
+$headings-line-height:      1.25;
+
+$small-font-size:           81.25%;
+
+$border-radius:          .25rem;
+$border-radius-lg:       .3125rem;
+$border-radius-sm:       .1875rem;
+
+$table-cell-padding:            .5rem;
+$table-sm-cell-padding:         .25rem;
+$table-border-color:            $gray-mystic;
+
+$btn-padding-x:             1rem;
+$btn-padding-y:             .3125rem;
+$btn-line-height:           1.25;
+$btn-padding-x-sm:          .5rem;
+$btn-padding-y-sm:          .375rem;
+$btn-secondary-color:       $brand-red;
+$btn-secondary-bg:          $white-alabaster;
+$btn-secondary-border:      $gray-ghost;
+
+$input-border-focus:        lighten($brand-red, 10%);
+$input-color:               $gray-shark;
+$input-color-placeholder:   $gray-regent;
+$input-padding-x:           .75rem;
+$input-padding-y:           .3125rem;
+$input-line-height:         1.25;
+$input-bg:                  $white-alabaster;
+$input-bg-disabled:         $gray-mystic;
+$input-border-color:        $gray-ghost;
+$input-btn-border-width:    .0625rem;
+$input-padding-x-sm:        .5rem;
+$input-padding-y-sm:        .375rem;
+$input-height:              (($font-size-base * $input-line-height) + ($input-padding-y * 2)) + ($input-btn-border-width * 2);
+
+$dropdown-padding-y:        .5rem;
+$dropdown-divider-bg:       $white-lilac;
+$dropdown-link-hover-bg:    $white-lilac;
+$dropdown-item-padding-x:   1.5rem;
+
+$navbar-padding-x:                  1.5rem;
+$navbar-padding-y:                  .6rem;
+$navbar-dark-color:                 $gray-ghost;
+$navbar-dark-hover-color:           $white-alabaster;
+$navbar-dark-active-color:          $white-alabaster;
+$navbar-dark-disabled-color:        $gray-regent;
+
+$card-bg:                           $white-alabaster;
+
+$modal-inner-padding:         1.5rem;
+$modal-dialog-margin:         0.75rem;
+$modal-dialog-sm-up-margin-y: 2rem;
+$modal-title-padding:         1.5rem;
+$modal-content-bg:               $white-catskill;
+$modal-content-border-color:     transparent;
+$modal-content-border-width:     0;
+$modal-content-xs-box-shadow:    0 6px 12px rgba(0,0,0,.5);
+$modal-content-sm-up-box-shadow: 0 7px 21px rgba(0,0,0,.5);
+$modal-backdrop-bg:           $gray-shark;
+$modal-backdrop-opacity:      .8;
+$modal-header-border-color:   $gray-mystic;
+$modal-header-border-width:   $border-width;
+$modal-lg:                    960px;
+$modal-md:                    640px;
+$modal-sm:                    420px;
+
+$breadcrumb-padding-y:          0;
+$breadcrumb-padding-x:          0;
+$breadcrumb-item-padding:       .5rem;
+$breadcrumb-bg:                 transparent;
+$breadcrumb-divider-color:      $gray-regent;
+$breadcrumb-active-color:       $gray-regent;
+$breadcrumb-divider:            "/";

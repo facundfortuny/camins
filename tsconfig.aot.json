@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "declaration": false,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": false,
+    "pretty": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "noImplicitUseStrict": false,
+    "noFallthroughCasesInSwitch": true,
+    "outDir": "./out_aot",
+    "types": [
+      "node",
+      "jasmine",
+      "lodash",
+      "toastr"
+    ]
+  },
+  "angularCompilerOptions": {
+    "debug": true,
+    "skipMetadataEmit" : true
+  },
+  "compileOnSave": false,
+  "files": [
+    "src/setup/prod.module.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

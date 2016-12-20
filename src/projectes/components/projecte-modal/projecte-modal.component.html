@@ -1,0 +1,15 @@
+<div class="modal-header">
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <h1 style="text-transform: uppercase;"
+        class="modal-title"
+        id="mesinfo">{{project.titol}}</h1>
+</div>
+<div class="modal-body">
+    <p>
+        {{project.descripcio}}
+        <br/>
+        <strong style="text-transform: uppercase;">{{project.country}}</strong>
+    </p>
+</div>

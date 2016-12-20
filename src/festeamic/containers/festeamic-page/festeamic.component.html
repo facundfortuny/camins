@@ -1,0 +1,125 @@
+<default-page>
+    <main>
+        <section id="festeamic" >
+            <h1>AMICS DE CAMINS</h1>
+            <p>
+                Per només 1 € al mes pots ajudar-nos a dur a terme els projectes pels que estem treballan a l'Àfrica.
+            </p>
+            <br>
+            <strong>Formulari per donar-te d'alta com Amic de Camins:</strong>
+            <div class="row col-xxs-12">
+                <form [formGroup]="festeAmicForm" (ngSubmit)="onSubmit(festeAmicForm.value)">
+                    <div class="form-inline row">
+                        <div class="form-group col-sm-6" [ngClass]="{
+                            'has-danger':!festeAmicForm.controls['nom'].valid && festeAmicForm.controls['nom'].touched,
+                            'has-success': festeAmicForm.controls['nom'].touched && festeAmicForm.controls['nom'].valid
+                        }">
+                            <input formControlName="nom" type="text" class="form-control" id="nom" placeholder="Nom"
+                            [ngClass]="{'form-control-success': festeAmicForm.controls['nom'].touched && festeAmicForm.controls['nom'].valid,
+                            'form-control-danger': festeAmicForm.controls['nom'].touched && !festeAmicForm.controls['nom'].valid}">
+                        </div>
+                        <div class="form-group col-sm-6" [ngClass]="{
+                            'has-danger':!festeAmicForm.controls['dni'].valid && festeAmicForm.controls['dni'].touched,
+                            'has-success': festeAmicForm.controls['dni'].touched && festeAmicForm.controls['dni'].valid
+                        }">
+                            <input formControlName="dni" type="text" class="form-control" id="dni" placeholder="Dni"
+                            [ngClass]="{'form-control-success': festeAmicForm.controls['dni'].touched && festeAmicForm.controls['dni'].valid,
+                            'form-control-danger': festeAmicForm.controls['dni'].touched && !festeAmicForm.controls['dni'].valid}">
+                        </div>
+                    </div>
+                    <div class="form-inline row">
+                        <div class="form-group col-sm-6" [ngClass]="{
+                            'has-danger':!festeAmicForm.controls['email'].valid && festeAmicForm.controls['email'].touched,
+                            'has-success': festeAmicForm.controls['email'].touched && festeAmicForm.controls['email'].valid
+                        }">
+                            <input formControlName="email" type="email" class="form-control" id="email" placeholder="Adreça electrònica" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                            [ngClass]="{'form-control-success': festeAmicForm.controls['email'].touched && festeAmicForm.controls['email'].valid,
+                            'form-control-danger': festeAmicForm.controls['email'].touched && !festeAmicForm.controls['email'].valid}">
+                            <div class="form-control-feedback" *ngIf="!festeAmicForm.controls['email'].valid && festeAmicForm.controls['email'].touched">Aquest email no és vàlid, sisplau revisa les teves dades.</div>
+                        </div>
+                        <div class="form-group col-sm-6" [ngClass]="{
+                            'has-danger':!festeAmicForm.controls['direccio'].valid && festeAmicForm.controls['direccio'].touched,
+                            'has-success': festeAmicForm.controls['direccio'].touched && festeAmicForm.controls['direccio'].valid
+                        }">
+                            <input formControlName="direccio" type="text" class="form-control" id="direccio" placeholder="Direcció"
+                            [ngClass]="{'form-control-success': festeAmicForm.controls['direccio'].touched && festeAmicForm.controls['direccio'].valid,
+                            'form-control-danger': festeAmicForm.controls['direccio'].touched && !festeAmicForm.controls['direccio'].valid}">
+                        </div>
+                    </div>
+                    <div class="form-inline row">
+                        <div class="form-group col-sm-4" [ngClass]="{
+                            'has-danger':!festeAmicForm.controls['cp'].valid && festeAmicForm.controls['cp'].touched,
+                            'has-success': festeAmicForm.controls['cp'].touched && festeAmicForm.controls['cp'].valid
+                        }">
+                            <input formControlName="cp" type="text" class="form-control" id="cp" placeholder="C.P."
+                            [ngClass]="{'form-control-success': festeAmicForm.controls['cp'].touched && festeAmicForm.controls['cp'].valid,
+                            'form-control-danger': festeAmicForm.controls['cp'].touched && !festeAmicForm.controls['cp'].valid}">
+                        </div>
+                        <div class="form-group col-sm-4" [ngClass]="{
+                            'has-danger':!festeAmicForm.controls['poblacio'].valid && festeAmicForm.controls['poblacio'].touched,
+                            'has-success': festeAmicForm.controls['poblacio'].touched && festeAmicForm.controls['poblacio'].valid
+                        }">
+                            <input formControlName="poblacio" type="text" class="form-control" id="poblacio" placeholder="Població"
+                            [ngClass]="{'form-control-success': festeAmicForm.controls['poblacio'].touched && festeAmicForm.controls['poblacio'].valid,
+                            'form-control-danger': festeAmicForm.controls['poblacio'].touched && !festeAmicForm.controls['poblacio'].valid}">
+                        </div>
+                        <div class="form-group col-sm-4" [ngClass]="{
+                            'has-danger':!festeAmicForm.controls['provincia'].valid && festeAmicForm.controls['provincia'].touched,
+                            'has-success': festeAmicForm.controls['provincia'].touched && festeAmicForm.controls['provincia'].valid
+                        }">
+                            <input formControlName="provincia" type="text" class="form-control" id="provincia" placeholder="Provincia"
+                            [ngClass]="{'form-control-success': festeAmicForm.controls['provincia'].touched && festeAmicForm.controls['provincia'].valid,
+                            'form-control-danger': festeAmicForm.controls['provincia'].touched && !festeAmicForm.controls['provincia'].valid}">
+                        </div>
+                    </div>
+                    <div class="form-inline row">
+                        <div class="form-group col-sm-6" [ngClass]="{
+                            'has-danger':!festeAmicForm.controls['telefon'].valid && festeAmicForm.controls['telefon'].touched,
+                            'has-success': festeAmicForm.controls['telefon'].touched && festeAmicForm.controls['telefon'].valid
+                        }">
+                            <input formControlName="telefon" type="number" class="form-control" id="telefon" placeholder="Telèfon"
+                            [ngClass]="{'form-control-success': festeAmicForm.controls['telefon'].touched && festeAmicForm.controls['telefon'].valid,
+                            'form-control-danger': festeAmicForm.controls['telefon'].touched && !festeAmicForm.controls['telefon'].valid}">
+                        </div>
+                        <div class="form-group col-sm-6" [ngClass]="{
+                            'has-danger':!festeAmicForm.controls['data'].valid && festeAmicForm.controls['data'].touched,
+                            'has-success': festeAmicForm.controls['data'].touched && festeAmicForm.controls['data'].valid
+                        }">
+                            <input formControlName="data" type="date" class="form-control" id="data" placeholder="data"
+                            [ngClass]="{'form-control-success': festeAmicForm.controls['data'].touched && festeAmicForm.controls['data'].valid,
+                            'form-control-danger': festeAmicForm.controls['data'].touched && !festeAmicForm.controls['data'].valid}">
+                        </div>
+                    </div>
+                    <div class="form-group" [ngClass]="{
+                        'has-danger':!festeAmicForm.controls['compte'].valid && festeAmicForm.controls['compte'].touched,
+                        'has-success': festeAmicForm.controls['compte'].touched && festeAmicForm.controls['compte'].valid
+                    }">
+                        <p>Faré l'aportació de 1€ <strong>mensual</strong> mitjançant pagament trimestral. En cas de voler fer una aportació mensual superior ho indicaré en l'apartat de Comentaris.</p>
+                        <p>Número de Compte IBAN:</p>
+                        <input formControlName="compte" type="text" class="form-control" id="compte" placeholder="IBAN"
+                        [ngClass]="{'form-control-success': festeAmicForm.controls['compte'].touched && festeAmicForm.controls['compte'].valid,
+                        'form-control-danger': festeAmicForm.controls['compte'].touched && !festeAmicForm.controls['compte'].valid}">
+                    </div>
+                    <div class="form-group" [ngClass]="{
+                        'has-danger':!festeAmicForm.controls['comentaris'].valid && festeAmicForm.controls['comentaris'].touched,
+                        'has-success': festeAmicForm.controls['comentaris'].touched && festeAmicForm.controls['comentaris'].valid
+                    }">
+                        <textarea formControlName="comentaris" type="text" class="form-control" id="comentaris" placeholder="comentaris" maxlength="250" rows="7"
+                        [ngClass]="{'form-control-success': festeAmicForm.controls['comentaris'].touched && festeAmicForm.controls['comentaris'].valid,
+                        'form-control-danger': festeAmicForm.controls['comentaris'].touched && !festeAmicForm.controls['comentaris'].valid}"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary float-xs-right" [disabled]="!festeAmicForm.valid">Enviar</button>
+                </form>
+            </div>
+            <div class="row col-xxs-11" style="margin-top: 30px; margin-bottom: 15px;">
+                <strong>O bé podeu fer-ho utilitzant el formulari en PDF (<a href="../../pdf/Amics_CAT.pdf" target="_blank"><strong>Versió en Català</strong></a> - <a href="../../pdf/Amics_ESP.pdf" target="_blank"><strong>Versión en Castellano</strong></a>) i enviar-lo aquesta adreça electrònica:</strong>
+
+                <a href="mailto:caminsongweb@gmail.com">caminsongweb@gmail.com</a>
+                <i>
+                    (Si teniu problemes per obrir o enviar el formulari, podeu descarregar
+                     <a href="http://get.adobe.com/es/reader/">AQUÍ</a> gratuïtament la darrera versió del programari)
+                </i>
+            </div>
+        </section>
+    </main>
+</default-page>
