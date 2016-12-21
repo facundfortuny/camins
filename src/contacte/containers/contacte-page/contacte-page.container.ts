@@ -10,28 +10,31 @@ export class ContactePageContainer {
     public contacteForm: FormGroup;
     nom: AbstractControl;
     email: AbstractControl;
+    subject: AbstractControl;
     message: AbstractControl;
 
     constructor(
         private formatBuilder: FormBuilder,
         private http: Http
     ) {
-        this.generateForm();
+        this.initForm();
     }
 
-    generateForm () {
+    initForm () {
         this.contacteForm = this.formatBuilder.group({
             nom: ['', Validators.required],
             email: ['', Validators.required],
+            subject: ['', Validators.required],
             message: ['', Validators.required]
         });
         this.nom = this.contacteForm.controls['nom'];
         this.email = this.contacteForm.controls['email'];
+        this.subject = this.contacteForm.controls['subject'];
         this.message = this.contacteForm.controls['message'];
     }
 
-    reset() {
-      this.generateForm();
+    resetForm() {
+      this.initForm();
     }
 
     onSubmit(value: string): void {
@@ -42,7 +45,7 @@ export class ContactePageContainer {
 
        this.http.post('/contact', value, options).subscribe(res => {
            console.log('res:', res);
-           this.reset();
+           this.resetForm();
        });
     }
 }

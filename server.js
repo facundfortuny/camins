@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 // Point static path to dist
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, process.env.CLIENT_FOLDER)));
 app.use('/pdf', express.static(path.join(__dirname, '/pdf')));
 app.use('/assets', express.static(path.join(__dirname, '/assets')));
 
@@ -33,20 +33,69 @@ let smtpTrans = nodemailer.createTransport(smtpTransport({
 
 // Catch all other routes and return the index file
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist/index.html'));
+    res.sendFile(path.join(__dirname, process.env.CLIENT_FOLDER, 'index.html'));
 });
 
 app.post('/contact', (req, res) => {
     console.log(req.body);
-    let name = req.body.nom,
-        email = req.body.email,
-        subject = 'Missage enviat per ' + req.body.name,
-        comment = req.body.message,
-        text = 'Nom: ' + name + ' Email: ' + email + ' Comentari: ' + comment,
+    let subject = req.body.subject || 'Nou missage a camins ONG',
+        text = 'Nou missage de ' + req.body.name +
+            ' amb email: ' + req.body.email +
+            'i comentari: ' + req.body.message,
+        html = `<p>Nou missage de ${req.body.nom} amb email: ${req.body.email}, i comentari:</p>
+            <p>${req.body.message}</p>`,
         mailOptions = {
             to: process.env.DESTINATION_MAIL,
             subject: subject,
-            text: text
+            text: text,
+            html: html
+        };
+
+    res.message = 'Missatge enviat!';
+    smtpTrans.sendMail(mailOptions, (error, response) => {
+        if (error) {
+            console.log(error);
+            res.end('An error occur');
+        } else {
+            console.log(response);
+            res.end('Send');
+        }
+    });
+});
+
+app.post('/festamic', (req, res) => {
+    console.log(req.body);
+    let subject = 'Nou amic de Camins ONG',
+        text = 'Nou amic de camins ONG amb ' +
+            ' nom: ' + req.body.name +
+            ', email: ' + req.body.email +
+            ', dni: ' + req.body.dni +
+            ', direccio: ' + req.body.direccio +
+            ', cp: ' + req.body.cp +
+            ', poblacio: ' + req.body.poblacio +
+            ', provincia: ' + req.body.provincia +
+            ', telefon: ' + req.body.telefon +
+            ', telefon: ' + req.body.telefon +
+            ', data: ' + req.body.data +
+            ', compte: ' + req.body.compte +
+            'i comentari: ' + req.body.comentaris,
+        html = `<h1>Nou amic:</h1>
+            <p><strong>nom: </strong>${req.body.nom}</p>
+            <p><strong>dni: </strong>${req.body.dni}</p>
+            <p><strong>email: </strong>${req.body.email}</p>
+            <p><strong>direccio: </strong>${req.body.direccio}</p>
+            <p><strong>cp: </strong>${req.body.cp}</p>
+            <p><strong>poblacio: </strong>${req.body.poblacio}</p>
+            <p><strong>provincia: </strong>${req.body.provincia}</p>
+            <p><strong>telefon: </strong>${req.body.telefon}</p>
+            <p><strong>data: </strong>${req.body.data}</p>
+            <p><strong>compte: </strong>${req.body.compte}</p>
+            <p><strong>comentaris: </strong>${req.body.comentaris}</p>`,
+        mailOptions = {
+            to: process.env.DESTINATION_MAIL,
+            subject: subject,
+            text: text,
+            html: html
         };
 
     res.message = 'Missatge enviat!';

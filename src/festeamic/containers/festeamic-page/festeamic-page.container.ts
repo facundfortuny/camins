@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Http, Headers, RequestOptions } from '@angular/http';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -9,10 +10,13 @@ export class FesteamicPageContainer {
     public festeAmicForm: FormGroup;
 
     constructor(
-        private formatBuilder: FormBuilder
-    ) {}
+        private formatBuilder: FormBuilder,
+        private http: Http
+    ) {
+        this.initForm();
+    }
 
-    ngOnInit() {
+    initForm () {
         this.festeAmicForm = this.formatBuilder.group({
             nom: ['', Validators.required],
             dni: ['', Validators.required],
@@ -28,7 +32,19 @@ export class FesteamicPageContainer {
         });
     }
 
+    resetForm () {
+        this.initForm();
+    }
+
     onSubmit(value: string): void {
        console.log('you submitted value: ', value);
+
+       let headers = new Headers({ 'Content-Type': 'application/json' }),
+           options = new RequestOptions({ headers: headers });
+
+       this.http.post('/festamic', value, options).subscribe(res => {
+           console.log('res:', res);
+           this.resetForm();
+       });
     }
 }
