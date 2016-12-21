@@ -5,12 +5,16 @@
   "main": "index.js",
   "scripts": {
     "build-prod": "npm run clean-dist && node_modules/webpack/bin/webpack.js --config webpack/webpack.build.js",
-    "build": "npm run ngc && npm run build-prod && npm run clean-ngfactories",
+    "build": "npm run ngc && npm run build-prod && npm run clean-ngfactories && npm run clean-ngsummaries",
     "clean-dist": "./node_modules/rimraf/bin.js dist",
     "clean-ngfactories": "find . -name '*.ngfactory.ts' -type f -delete",
+    "clean-ngsummaries": "find . -name '*.ngsummary.json' -type f -delete",
     "ngc": "./node_modules/.bin/ngc -p ./tsconfig.aot.json",
     "start": "node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack/webpack.dev.js --inline --hot --host 0.0.0.0",
-    "test": "tslint -c tslint.json 'src/**/*.ts?(x)'"
+    "eslint": "eslint -c .eslintrc server.js",
+    "tslint": "tslint -c tslint.json 'src/**/*.ts?(x)'",
+    "lint": "npm run eslint && npm run tslint",
+    "test": "npm run lint"
   },
   "author": "",
   "license": "ISC",

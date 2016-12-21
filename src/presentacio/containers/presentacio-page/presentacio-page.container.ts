@@ -1,6 +1,4 @@
-import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
-import { ViewChild, Component, ElementRef } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'presentacio-page',

@@ -1,5 +1,4 @@
-import {Component, Output, EventEmitter, Input, ChangeDetectionStrategy} from '@angular/core';
-import { Router } from '@angular/router';
+import {Component, Output, EventEmitter, ChangeDetectionStrategy} from '@angular/core';
 
 @Component({
     selector: 'navbar',
