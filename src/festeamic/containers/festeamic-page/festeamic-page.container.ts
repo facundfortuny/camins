@@ -8,12 +8,16 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class FesteamicPageContainer {
     public festeAmicForm: FormGroup;
+    error: Boolean;
+    enviat: Boolean;
 
     constructor(
         private formatBuilder: FormBuilder,
         private http: Http
     ) {
         this.initForm();
+        this.error = false;
+        this.enviat = false;
     }
 
     initForm () {
@@ -45,6 +49,10 @@ export class FesteamicPageContainer {
        this.http.post('/festamic', value, options).subscribe(res => {
            console.log('res:', res);
            this.resetForm();
+           this.enviat = true;
+           setTimeout(function () {
+               this.enviat = false;
+           }, 3000);
        });
     }
 }

@@ -43,6 +43,12 @@
                     </form>
                 </div>
             </div>
+            <div class="alert alert-success col-xs-6" role="alert" *ngIf="enviat">
+              <strong>Missatge enviat!</strong>
+            </div>
+            <div class="alert alert-danger col-xs-6" role="alert" *ngIf="error">
+              <strong>El missatge no s'ha pogut enviar.</strong> Per favor, tornar a provar.
+            </div>
             <div class="row">
                 <div class="col-md-8">
                     <img src="images/contacte/caminsong.jpg" >

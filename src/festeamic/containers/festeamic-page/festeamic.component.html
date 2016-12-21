@@ -111,6 +111,12 @@
                     <button type="submit" class="btn btn-primary float-xs-right" [disabled]="!festeAmicForm.valid">Enviar</button>
                 </form>
             </div>
+            <div class="alert alert-success col-xs-6" role="alert" *ngIf="enviat">
+              <strong>Missatge enviat!</strong>
+            </div>
+            <div class="alert alert-danger col-xs-6" role="alert" *ngIf="error">
+              <strong>El missatge no s'ha pogut enviar.</strong> Per favor, tornar a provar.
+            </div>
             <div class="row col-xxs-11" style="margin-top: 30px; margin-bottom: 15px;">
                 <strong>O bé podeu fer-ho utilitzant el formulari en PDF (<a href="../../pdf/Amics_CAT.pdf" target="_blank"><strong>Versió en Català</strong></a> - <a href="../../pdf/Amics_ESP.pdf" target="_blank"><strong>Versión en Castellano</strong></a>) i enviar-lo aquesta adreça electrònica:</strong>
 

@@ -12,12 +12,16 @@ export class ContactePageContainer {
     email: AbstractControl;
     subject: AbstractControl;
     message: AbstractControl;
+    error: Boolean;
+    enviat: Boolean;
 
     constructor(
         private formatBuilder: FormBuilder,
         private http: Http
     ) {
         this.initForm();
+        this.error = false;
+        this.enviat = false;
     }
 
     initForm () {
@@ -46,6 +50,10 @@ export class ContactePageContainer {
        this.http.post('/contact', value, options).subscribe(res => {
            console.log('res:', res);
            this.resetForm();
+           this.enviat = true;
+           setTimeout(function() {
+               this.enviat = false;
+           }, 3000);
        });
     }
 }
