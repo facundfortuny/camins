@@ -1,3 +1,4 @@
+import { Http, Headers, RequestOptions } from '@angular/http';
 import { Component } from '@angular/core';
 import { AbstractControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 
@@ -10,7 +11,8 @@ export class ContactePageContainer {
     nom: AbstractControl;
 
     constructor(
-        private formatBuilder: FormBuilder
+        private formatBuilder: FormBuilder,
+        private http: Http
     ) {
         this.contacteForm = this.formatBuilder.group({
             nom: ['', Validators.required],
@@ -22,5 +24,12 @@ export class ContactePageContainer {
 
     onSubmit(value: string): void {
        console.log('you submitted value: ', value);
+
+       let headers = new Headers({ 'Content-Type': 'application/json' }),
+           options = new RequestOptions({ headers: headers });
+
+       this.http.post('//localhost:8088/contact', value, options).subscribe(res => {
+           console.log('res:', res);
+       });
     }
 }
