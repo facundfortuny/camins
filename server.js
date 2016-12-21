@@ -50,38 +50,16 @@ app.post('/contact', (req, res) => {
         };
 
     res.message = 'Missatge enviat!';
-    smtpTrans.sendMail(mailOptions, (error, res) => {
+    smtpTrans.sendMail(mailOptions, (error, response) => {
         if (error) {
             console.log(error);
             res.end('An error occur');
         } else {
+            console.log(response);
             res.end('Send');
         }
     });
 });
-
-// app.post('/festeamic', function(req, res) {
-//     console.log(req.body);
-//     var name = req.body.name,
-//         email = req.body.email,
-//         subject = 'Missage enviat per ' + req.body.name,
-//         comment = req.body.comment,
-//         text = 'Nom: ' + name + ' Email: ' + email + ' Comentari: '+ comment,
-//             mailOptions = {
-//                 to : process.env.DESTINATION_MAIL,
-//                 subject : subject,
-//                 text : text
-//         };
-//     res.message = 'Missatge enviat!';
-//         smtpTrans.sendMail(mailOptions, function(error, response){
-//         if (error) {
-//             console.log(error);
-//             res.end("error");
-//         } else {
-//             res.end("sent");
-//         }
-//     });
-// });
 
 /**
  * Get port from environment and store in Express.

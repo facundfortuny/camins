@@ -9,17 +9,29 @@ import { AbstractControl, FormGroup, FormBuilder, Validators } from '@angular/fo
 export class ContactePageContainer {
     public contacteForm: FormGroup;
     nom: AbstractControl;
+    email: AbstractControl;
+    message: AbstractControl;
 
     constructor(
         private formatBuilder: FormBuilder,
         private http: Http
     ) {
+        this.generateForm();
+    }
+
+    generateForm () {
         this.contacteForm = this.formatBuilder.group({
             nom: ['', Validators.required],
-            email: ['', Validators.compose([Validators.required])],
+            email: ['', Validators.required],
             message: ['', Validators.required]
         });
         this.nom = this.contacteForm.controls['nom'];
+        this.email = this.contacteForm.controls['email'];
+        this.message = this.contacteForm.controls['message'];
+    }
+
+    reset() {
+      this.generateForm();
     }
 
     onSubmit(value: string): void {
@@ -28,8 +40,9 @@ export class ContactePageContainer {
        let headers = new Headers({ 'Content-Type': 'application/json' }),
            options = new RequestOptions({ headers: headers });
 
-       this.http.post('//localhost:8088/contact', value, options).subscribe(res => {
+       this.http.post('/contact', value, options).subscribe(res => {
            console.log('res:', res);
+           this.reset();
        });
     }
 }
