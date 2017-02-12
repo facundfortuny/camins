@@ -38,59 +38,82 @@ app.get('*', (req, res) => {
 
 app.post('/contact', (req, res) => {
     console.log(req.body);
-    let subject = req.body.subject || 'Nou missage a camins ONG',
-        text = 'Nou missage de ' + req.body.name +
-            ' amb email: ' + req.body.email +
-            'i comentari: ' + req.body.message,
-        html = `<p>Nou missage de ${req.body.nom} amb email: ${req.body.email}, i comentari:</p>
-            <p>${req.body.message}</p>`,
+    let name = req.body.nom,
+        email = req.body.email,
+        subject = req.body.subject,
+        message = req.body.message,
+        botDetected = req.body.fake,
+        text = 'Nou missage de ' + name +
+            ' amb email: ' + email +
+            'i comentari: ' + message,
+        html = `<p>Nou missage de ${name} amb email: ${email}, i comentari:</p>
+                <p>${message}</p>`,
         mailOptions = {
             to: process.env.DESTINATION_MAIL,
             subject: subject,
             text: text,
             html: html
         };
-
-    res.message = 'Missatge enviat!';
-    smtpTrans.sendMail(mailOptions, (error, response) => {
-        if (error) {
-            console.log(error);
-            res.end('An error occur');
+    if (name && email && message) {
+        if (!botDetected) {
+            subject = subject || 'Nou missage a camins ONG';
+            res.message = 'Missatge enviat!';
+            smtpTrans.sendMail(mailOptions, (error, response) => {
+                if (error) {
+                    console.log(error);
+                    res.end('Error');
+                } else {
+                    console.log(response);
+                    res.end('Send');
+                }
+            });
         } else {
-            console.log(response);
-            res.end('Send');
+            res.end('Error');
         }
-    });
+    } else {
+        res.end('Error');
+    }
 });
 
 app.post('/festamic', (req, res) => {
     console.log(req.body);
-    let subject = 'Nou amic de Camins ONG',
+    let nom = req.body.nom,
+        dni = req.body.dni,
+        email = req.body.email,
+        direccio = req.body.direccio,
+        cp = req.body.cp,
+        poblacio = req.body.poblacio,
+        provincia = req.body.provincia,
+        telefon = req.body.telefon,
+        data = req.body.data,
+        compte = req.body.compte,
+        comentaris = req.body.comentaris,
+        botDetected = req.body.fake,
+        subject = 'Nou amic de Camins ONG',
         text = 'Nou amic de camins ONG amb ' +
-            ' nom: ' + req.body.name +
-            ', email: ' + req.body.email +
-            ', dni: ' + req.body.dni +
-            ', direccio: ' + req.body.direccio +
-            ', cp: ' + req.body.cp +
-            ', poblacio: ' + req.body.poblacio +
-            ', provincia: ' + req.body.provincia +
-            ', telefon: ' + req.body.telefon +
-            ', telefon: ' + req.body.telefon +
-            ', data: ' + req.body.data +
-            ', compte: ' + req.body.compte +
-            'i comentari: ' + req.body.comentaris,
+            ' nom: ' + nom +
+            ', email: ' + email +
+            ', dni: ' + dni +
+            ', direccio: ' + direccio +
+            ', cp: ' + cp +
+            ', poblacio: ' + poblacio +
+            ', provincia: ' + provincia +
+            ', telefon: ' + telefon +
+            ', data: ' + data +
+            ', compte: ' + compte +
+            'i comentari: ' + comentaris,
         html = `<h1>Nou amic:</h1>
-            <p><strong>nom: </strong>${req.body.nom}</p>
-            <p><strong>dni: </strong>${req.body.dni}</p>
-            <p><strong>email: </strong>${req.body.email}</p>
-            <p><strong>direccio: </strong>${req.body.direccio}</p>
-            <p><strong>cp: </strong>${req.body.cp}</p>
-            <p><strong>poblacio: </strong>${req.body.poblacio}</p>
-            <p><strong>provincia: </strong>${req.body.provincia}</p>
-            <p><strong>telefon: </strong>${req.body.telefon}</p>
-            <p><strong>data: </strong>${req.body.data}</p>
-            <p><strong>compte: </strong>${req.body.compte}</p>
-            <p><strong>comentaris: </strong>${req.body.comentaris}</p>`,
+            <p><strong>nom: </strong>${nom}</p>
+            <p><strong>dni: </strong>${dni}</p>
+            <p><strong>email: </strong>${email}</p>
+            <p><strong>direccio: </strong>${direccio}</p>
+            <p><strong>cp: </strong>${cp}</p>
+            <p><strong>poblacio: </strong>${poblacio}</p>
+            <p><strong>provincia: </strong>${provincia}</p>
+            <p><strong>telefon: </strong>${telefon}</p>
+            <p><strong>data: </strong>${data}</p>
+            <p><strong>compte: </strong>${compte}</p>
+            <p><strong>comentaris: </strong>${comentaris}</p>`,
         mailOptions = {
             to: process.env.DESTINATION_MAIL,
             subject: subject,
@@ -98,16 +121,24 @@ app.post('/festamic', (req, res) => {
             html: html
         };
 
-    res.message = 'Missatge enviat!';
-    smtpTrans.sendMail(mailOptions, (error, response) => {
-        if (error) {
-            console.log(error);
-            res.end('An error occur');
+    if (nom && dni && email && direccio && cp && poblacio && provincia && telefon && data && compte) {
+        if (!botDetected) {
+            res.message = 'Missatge enviat!';
+            smtpTrans.sendMail(mailOptions, (error, response) => {
+                if (error) {
+                    console.log(error);
+                    res.end('Error');
+                } else {
+                    console.log(response);
+                    res.end('Send');
+                }
+            });
         } else {
-            console.log(response);
-            res.end('Send');
+            res.end('Error');
         }
-    });
+    } else {
+        res.end('Error');
+    }
 });
 
 /**

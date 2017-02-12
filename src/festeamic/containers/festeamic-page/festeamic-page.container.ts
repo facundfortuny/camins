@@ -20,7 +20,7 @@ export class FesteamicPageContainer {
         this.enviat = false;
     }
 
-    initForm () {
+    initForm() {
         this.festeAmicForm = this.formatBuilder.group({
             nom: ['', Validators.required],
             dni: ['', Validators.required],
@@ -32,27 +32,33 @@ export class FesteamicPageContainer {
             telefon: ['', Validators.required],
             data: [, Validators.required],
             compte: ['', Validators.required],
-            comentaris: ''
+            comentaris: '',
+            fake: ''
         });
     }
 
-    resetForm () {
+    resetForm() {
         this.initForm();
     }
 
     onSubmit(value: string): void {
-       console.log('you submitted value: ', value);
+        let headers = new Headers({ 'Content-Type': 'application/json' }),
+            options = new RequestOptions({ headers: headers });
 
-       let headers = new Headers({ 'Content-Type': 'application/json' }),
-           options = new RequestOptions({ headers: headers });
+        this.http.post('/festamic', value, options).subscribe(res => {
+            if (res['_body'] === 'Error') {
+                this.enviat = false;
+                this.error = true;
+            } else {
+                this.enviat = true;
+                this.error = false;
+                this.resetForm();
+            }
 
-       this.http.post('/festamic', value, options).subscribe(res => {
-           console.log('res:', res);
-           this.resetForm();
-           this.enviat = true;
-           setTimeout(function () {
-               this.enviat = false;
-           }, 3000);
-       });
+            setTimeout(function () {
+                this.enviat = false;
+                this.error = false;
+            }.bind(this), 3000);
+        });
     }
 }

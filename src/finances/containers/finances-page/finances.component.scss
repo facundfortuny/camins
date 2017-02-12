@@ -6,3 +6,11 @@
         margin-bottom: 15px;
     }
 }
+
+.borderless tbody tr td, .borderless thead th {
+    border: none;
+}
+
+.table th, .table td {
+    padding: 0;
+}

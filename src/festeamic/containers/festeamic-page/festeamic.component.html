@@ -108,6 +108,9 @@
                         [ngClass]="{'form-control-success': festeAmicForm.controls['comentaris'].touched && festeAmicForm.controls['comentaris'].valid,
                         'form-control-danger': festeAmicForm.controls['comentaris'].touched && !festeAmicForm.controls['comentaris'].valid}"></textarea>
                     </div>
+                    <div class="form-group" style="display: none">
+                        <input formControlName="fake" type="text" class="form-control" id="fake" style="display: none">
+                    </div>
                     <button type="submit" class="btn btn-primary float-xs-right" [disabled]="!festeAmicForm.valid">Enviar</button>
                 </form>
             </div>

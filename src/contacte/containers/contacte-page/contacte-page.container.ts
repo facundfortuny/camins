@@ -12,6 +12,7 @@ export class ContactePageContainer {
     email: AbstractControl;
     subject: AbstractControl;
     message: AbstractControl;
+    fake: AbstractControl;
     error: Boolean;
     enviat: Boolean;
 
@@ -24,36 +25,44 @@ export class ContactePageContainer {
         this.enviat = false;
     }
 
-    initForm () {
+    initForm() {
         this.contacteForm = this.formatBuilder.group({
             nom: ['', Validators.required],
             email: ['', Validators.required],
             subject: ['', Validators.required],
-            message: ['', Validators.required]
+            message: ['', Validators.required],
+            fake: ''
         });
         this.nom = this.contacteForm.controls['nom'];
         this.email = this.contacteForm.controls['email'];
         this.subject = this.contacteForm.controls['subject'];
         this.message = this.contacteForm.controls['message'];
+        this.fake = this.contacteForm.controls['fake'];
     }
 
     resetForm() {
-      this.initForm();
+        this.initForm();
     }
 
     onSubmit(value: string): void {
-       console.log('you submitted value: ', value);
+        let headers = new Headers({ 'Content-Type': 'application/json' }),
+            options = new RequestOptions({ headers: headers });
 
-       let headers = new Headers({ 'Content-Type': 'application/json' }),
-           options = new RequestOptions({ headers: headers });
+        this.http.post('/contact', value, options).subscribe(res => {
 
-       this.http.post('/contact', value, options).subscribe(res => {
-           console.log('res:', res);
-           this.resetForm();
-           this.enviat = true;
-           setTimeout(function() {
-               this.enviat = false;
-           }, 3000);
-       });
+            if (res['_body'] === 'Error') {
+                this.enviat = false;
+                this.error = true;
+            } else {
+                this.enviat = true;
+                this.error = false;
+                this.resetForm();
+            }
+
+            setTimeout(function () {
+                this.enviat = false;
+                this.error = false;
+            }.bind(this), 3000);
+        });
     }
 }

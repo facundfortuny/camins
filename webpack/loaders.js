@@ -30,8 +30,8 @@ module.exports = [
         loader: 'url'
     },
     {
-      test: /\.(html|css)$/,
-      loader: 'raw-loader'
+        test: /\.(html|css)$/,
+        loader: 'raw-loader'
     },
     {
         test: /\.json$/,
