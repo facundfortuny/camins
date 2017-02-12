@@ -29,7 +29,6 @@
                             <input formControlName="subject" type="text" class="form-control" id="subject" placeholder="Assumpte"
                             [ngClass]="{'form-control-success': contacteForm.controls['subject'].touched && contacteForm.controls['subject'].valid,
                             'form-control-danger': contacteForm.controls['subject'].touched && !contacteForm.controls['subject'].valid}">
-                            <div class="form-control-feedback" *ngIf="!contacteForm.controls['subject'].valid && contacteForm.controls['subject'].touched">Aquest email no és vàlid, sisplau revisa les teves dades.</div>
                         </div>
                         <div class="form-group" [ngClass]="{
                             'has-danger':!contacteForm.controls['message'].valid && contacteForm.controls['message'].touched,
