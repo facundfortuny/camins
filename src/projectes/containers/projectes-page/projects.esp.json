@@ -1,0 +1,122 @@
+{
+    "rwanda": [
+        {
+            "id": 1,
+            "titol": "Comedor Escolar de Ruli",
+            "image": "images/projectes/foto_menjador.jpg",
+            "descripcio": "La escuela de Ruli se inauguró en 1980. En 2009, momento en que empezamos el proyecto, la escuela tenía 800 alumnos de primaria y secundaria de entre 5 y 15 años, y trabajan en ella 20 profesores. La mayoría de los niños y niñas del pueblo de Ruli y alrededores estudia en esta escuela. Se financia por el gobierno ruandés y no dispone de comedor escolar, por lo que todos los niños vuelven a su casa a comer. Entre todos los alumnos, el Centro Nutricional de la misión detectó que había unos 40 niños que necesitaban acceso urgente y regular a alimentos variados y frescos para un correcto crecimiento, y que sus familias no tenían posibilidades de dárselos. Por ello se inició el proyecto de comedor escolar que da desayuno y almuerzo a 40 niños diariamente de lunes a viernes. Este proyecto ha pasado a formar parte, desde finales de 2014, del proyecto \"Comedor social de Ruli\", que tiene un mayor alcance.",
+            "country": "Rwanda"
+        },
+        {
+            "id": 2,
+            "titol": "Comedor Social de Ruli",
+            "image": "images/projectes/menjadorsocial.jpg",
+            "descripcio": "A principios de 2013, Camins ONG decidió colaborar con el nuevo proyecto de comedor social que la misión de Ruli inició a raíz del cierre del orfanato. El comedor social está gestionado por las hermanas Dominicas de Ruli (con las que ya colaboramos en otros proyectos), aprovechando las instalaciones del orfanato, que quedaron sin uso. Se calcula que unos 200 niños y adolescentes de entre 3 y 20 años podrán beneficiarse de este comedor, que desde finales de 2014 ha integrado también el Comedor Escolar, que da alimentos a niños en riesgo de desnutrición. Todos estos niños están escolarizados en Ruli, y pueden acudir al comedor social entre una y tres veces al día dependiendo del tiempo de trayecto que tienen que recorrer para volver a casa. Actualmente la mayoría de estos huérfanos sólo tienen una comida diaria poco nutritiva por la noche después de volver de la escuela. El comedor social ofrecerá desayuno, almuerzo y cena de lunes a viernes durante todo el año.",
+            "country": "Rwanda"
+        },
+        {
+            "id": 3,
+            "titol": "Granja-Vivienda",
+            "image": "images/projectes/GranjaVivenda.jpg",
+            "descripcio": "Construcción de una granja-vivienda para cinco niñas huérfanas, una de ellas con estudios de veterinaria, en el poblado de Ruli (Rwanda). Los productos obtenidos irán destinados al comedor escolar y al comedor social, y está previsto que los excedentes intenten comercializarse para conseguir que la granja sea económicamente autosuficiente.",
+            "country": "Rwanda"
+        },
+        {
+            "id": 4,
+            "titol": "Taller de confección de Kagugu",
+            "image": "images/projectes/tallerconfeccio.jpg",
+            "descripcio": "Una de las misioneras españolas que vive en la capital Kigali nos pidió ayuda para comprar 15 máquinas de coser. Su objetivo era montar un taller para dar trabajo a mujeres jóvenes de la ciudad y sacarlas de la prostitución. Inicialmente adquirimos las máquinas, y posteriormente les hemos ayudado, primero en la formación de las mujeres, y después en dar salida a lo que se fabrica. Con la distribución del material que producen se consiguen dos objetivos: i) pagarles un sueldo y dotarlas de recursos, y ii) obtener un margen que permite obtener una financiación adicional para otros proyectos.",
+            "country": "Rwanda"
+        },
+        {
+            "id": 5,
+            "titol": "Taller manualidades de Ruli",
+            "image": "images/projectes/tallermanualitats.jpg",
+            "descripcio": "Dentro de las instalaciones de Ruli había un taller de manualidades formado por 25 madres de familia que trabajaban muy bien la hoja seca de plátano. Este trabajo significaba la base de la manutención de sus familias. Actualmente, el taller está parado por falta de demanda de material.",
+            "country": "Rwanda"
+        },
+        {
+            "id": 6,
+            "titol": "Padre Cabayol",
+            "image": "images/projectes/foto_cabayol.jpg",
+            "descripcio": "En Campagna, un paraje fantástico del norte de Rwanda, trabaja desde hace mucho tiempo el misionero Padre Cabayol. Hombre mayor y delgado, pero con una energía sin fin, que ha sido capaz de construir miles de pequeñas casas con base de piedra para evitar los efectos del agua. También ha iniciado una cooperativa con los campesinos de la zona, y con los fondos que le llegan por diferentes vías reparte grandes cantidades de comida, sobretodo entre los pigmeos, que es la comunidad más pobre de la zona. El padre es una persona que inspira la máxima confianza, y por ello le ayudamos siempre que nos es posible.",
+            "country": "Rwanda"
+        },
+        {
+            "id": 7,
+            "titol": "Profesores Kagugu",
+            "image": "images/projectes/professorsKAGUGU.jpg",
+            "descripcio": "Kagugu es un barrio de Kigali con mucha población marginal. Uno de los grupos más desatendidos es el de las adolescentes sin estudios ni profesión. Las hermanas Dominicas de la Anunciata tienen una casa en este barrio, y buscan la forma de darles alguna perspectiva de futuro mediante cursos anuales, utilizando el espacio de que disponen. El edificio, a parte de una escuela infantil, cuenta con diferentes espacios que están a disposición de la gente del barrio. Los principales talleres que Camins financia y que se hacen en estas salas son: - Taller de costura. A parte del hecho que se da trabajo y, por tanto, un sueldo, a la profesora de costura, muchas chicas ya se han beneficiado del taller. El principal objetivo es que aprendan un oficio que les permita encontrar trabajo y subsistir por su cuenta, mitigando, de este modo, el riesgo de exclusión social que sufren. Las posibilidades de encontrar trabajo de costura son bajas, pero algunas de ellas lo consiguen: bien trabajando para otra costurera, bien trabajando en el taller de confección. - Alfabetización: Los mismos grupos reciben clases de alfabetización; las posibilidades de encontrar trabajo aumentan mucho, a parte del avance que representa para el buen desarrollo de su vida diaria.",
+            "country": "Rwanda"
+        },
+        {
+            "id": 8,
+            "titol": "Monjas de Cyanica",
+            "image": "images/projectes/monges_cyanica.jpg",
+            "descripcio": "En la mayoría de viajes que realizamos a Rwanda visitamos la población de Cyanica, donde se encuentran unas monjas ruandesas de la congregación \"Amigos de los pobres\". Ya en el primer viaje nos dimos cuenta de la escasez de recursos de que disponen, tanto ellas como la gente de la zona. En la medida de los posible, desde Camins ONG colaboraremos económicamente para que sean ellas, que conocen más en detalle las necesidades de la zona, las que distribuyan la ayuda entre la gente de su poblado.",
+            "country": "Rwanda"
+        },
+        {
+            "id": 9,
+            "titol": "Reparación ambulancia",
+            "image": "images/projectes/foto_4x4.jpg",
+            "descripcio": "El hopital de Ruli en Rwanda se encuentra en una zona montañosa a unos 60 kilómetros de la capital, Kigali. Los caminos para llegar a Ruli están siempre muy deteriorados y, por ello, el desgaste de la ambulancia 4x4 es muy alto. En 2009 las misioneras de Ruli nos comunicaron que se tenía que cambiar una pieza rota que inutilizaba el vehículo. Asumimos la reparación, lo que permitió que se siguiese con el servicio de traslado en los casos de urgencia.",
+            "country": "Rwanda"
+        },
+        {
+            "id": 10,
+            "titol": "Ropas, jabón y velas",
+            "image": "images/projectes/robes_espelmes.jpg",
+            "descripcio": "A lo largo de los años de ir a Rwanda, hemos observado que para la gente de fuera de Ruli, como los campesinos que viven en cabañas diminutas, las cosas simples, pero de primera necesidad para ellos, como el jabón, las velas y las ropas grandes y coloridas para las mujeres, son muy bien recibidas. En uno de los viajes destinamos dinero para comparar una buena cantidad de estas cosas allí mismo, y repartirlo entre los más necesitados. De esto modo, comprándolo allí, ayudábamos asimismo al comercio en la zona.",
+            "country": "Rwanda"
+        },
+        {
+            "id": 11,
+            "titol": "Compresor clínica dental. Hospital de Ruli",
+            "image": "images/projectes/foto_compresor.jpg",
+            "descripcio": "Financiación del compresor para la clínica dental. Este compresor permite el funcionamiento del material rotatorio del sillón dental (para realizar las obturaciones) y también permite el funcionamiento del aparato de ultrasonidos (para realizar las limpiezas dentales).",
+            "country": "Rwanda"
+        },
+        {
+            "id": 12,
+            "titol": "Estudios Universitarios",
+            "image": "images/projectes/estudisuniversitaris.jpg",
+            "descripcio": "Subvención de los estudios universitarios, manutención y alojamiento durante los tres años de carrera a una estudiante de Kigali. Hasta ahora ha vivido con su madre, que es viuda y no tiene medios para pagarle los estudios. Ha empezado estudios en la Universidad de Ruhengeri de Economía Aplicada. La carrera son tres años y actualmente cursa segundo. Ruhengeri está al noroeste de Ruanda, a 100 Km de Kigali. Es por ello que la estudiante se queda toda la semana en una residencia, puesto que no le es fácil realizar el recorrido a diario.",
+            "country": "Rwanda"
+        }
+    ],
+    "cameroun": [
+        {
+            "id":13,
+            "titol": "Hospital de Djunang",
+            "image": "images/projectes/foto_CAMEROUN_equip.jpg",
+            "descripcio": "La primera fase del hospital de Djunang en Bafoussam fue construida por una fundación japonesa, y posteriormente, con la ayuda de otras organizaciones, se han ido construyendo nuevas areas de hospitalización, bloque operatorio, salas de consultas y maternidad. Posteriormente, para un buen funcionamiento de todas las instalaciones ya realizadas, fue necesaria la construcción de dos rampas: una en la entrada desde la calle, y la otra para llegar al segundo piso del hospital, que es donde está el bloque operatorio.",
+            "country": "Cameroun"
+        },
+        {
+            "id": 14,
+            "titol": "Curso y máquinas de coser",
+            "image": "images/projectes/foto_COSIR.jpg",
+            "descripcio": "Nos llegó una carta desde Camerún que nos explicaba la trieste historia de un niño llamado Jean. Ya desde muy pequeño se quedó huérfano y en la calle, donde fue acogido por una familia numerosa. De joven intentó hacer realidad su sueño: ser modista. Desde Camins ONG asumimos la cantidad de 450 €, que es el coste de un curso de costura durante un año y la compra de una máquina de coser para poder llevar a cabo lo que más le apasionaba.",
+            "country": "Cameroun"
+        }
+    ],
+    "benín": [
+        {
+            "id": 15,
+            "titol": "Centro chicas Bembéréké",
+            "image": "images/projectes/foto_benin.jpg",
+            "descripcio": "El objetivo general del proyecto es contribuir al cumplimiento del derecho a la educación y facilitándosela a las chicas del medio rural de la comunidad de Bembéréké, con el objetivo de mejorar las condiciones de vida en la residencia y la alimentación de las chicas del \"Casal Anunciata\" de esta comunidad. El proyecto se enmarca en el cumplimiento de los derechos de la educación y de manera más específica, dentro de las condiciones basadas en: la alimentación, la salud, el acceso al agua potable, etc... El centro acoge las chicas que vienen de lugares pobres y lejanos de la comunidad. Generalmente sus padres no tienen medios para mantener materialmente y financieramente los estudios de sus hijas, y adicionalmente la mayor parte de los pueblos no tiene marcos propicios para la formación de estas chicas. Ésta es la razón de la creación de este centro de chicas. Actualmente, el centro acoge a unas 80 chicas.",
+            "country": "benin"
+        }
+    ],
+    "costa d'Ivori": [
+        {
+            "id": 16,
+            "titol": "Formación profesional en agricultura i ramadería",
+            "image": "images/projectes/formacioprofessional.jpg",
+            "descripcio": "Camins ONG ha colaborado en el proyecto “Formación profesional en agricultura y ganadería.  Reinserción socioeconómica de jóvenes de Memni” mediante la donación de 6.000 euros. Este proyecto tiene la finalidad de formar, durante 12 meses, a 30 jóvenes no escolarizados y sin trabajo, en técnicas modernas de agricultura y ganadería, con la finalidad de facilitarles su reinserción laboral. Es un proyecto que se lleva a cabo a través de la granja-escuela “Le Grenier de Dieu” de la fundación “Jesus Peregrin”, que consiste en 30 becas anuales por un importe de 802 euros (formación y manutención) cada una. El proyecto tenía un importe total de 24.060 euros, de los que Camins asumió una cuarta parte (6.000 euros) para el curso 2014-2015.",
+            "country": "Costa de Marfil"
+        }
+    ]
+}

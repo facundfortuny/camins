@@ -8,7 +8,7 @@ export class ProjectesPageContainer {
     public projects;
     public arrayProjects: Array<Object>;
     constructor() {
-        this.projects = require('./projects.json');
+        this.projects = require('./projects.esp.json');
         this.arrayProjects = [];
         for (var key in this.projects) {
             if (this.projects.hasOwnProperty(key)) {

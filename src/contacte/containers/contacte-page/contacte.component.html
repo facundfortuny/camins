@@ -9,7 +9,7 @@
                             'has-danger':!contacteForm.controls['nom'].valid && contacteForm.controls['nom'].touched,
                             'has-success': contacteForm.controls['nom'].touched && contacteForm.controls['nom'].valid
                         }">
-                            <input formControlName="nom" type="text" class="form-control" id="nom" placeholder="Nom"
+                            <input formControlName="nom" type="text" class="form-control" id="nom" placeholder="Nombre"
                             [ngClass]="{'form-control-success': contacteForm.controls['nom'].touched && contacteForm.controls['nom'].valid,
                             'form-control-danger': contacteForm.controls['nom'].touched && !contacteForm.controls['nom'].valid}">
                         </div>
@@ -17,19 +17,18 @@
                             'has-danger':!contacteForm.controls['email'].valid && contacteForm.controls['email'].touched,
                             'has-success': contacteForm.controls['email'].touched && contacteForm.controls['email'].valid
                         }">
-                            <input formControlName="email" type="email" class="form-control" id="email" placeholder="Adreça electrònica" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                            <input formControlName="email" type="email" class="form-control" id="email" placeholder="Correo electrónico" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
                             [ngClass]="{'form-control-success': contacteForm.controls['email'].touched && contacteForm.controls['email'].valid,
                             'form-control-danger': contacteForm.controls['email'].touched && !contacteForm.controls['email'].valid}">
-                            <div class="form-control-feedback" *ngIf="!contacteForm.controls['email'].valid && contacteForm.controls['email'].touched">Aquest email no és vàlid, sisplau revisa les teves dades.</div>
+                            <div class="form-control-feedback" *ngIf="!contacteForm.controls['email'].valid && contacteForm.controls['email'].touched">Este correo no es valido, porfavor revise sus datos.</div>
                         </div>
                         <div class="form-group" [ngClass]="{
                             'has-danger':!contacteForm.controls['subject'].valid && contacteForm.controls['subject'].touched,
                             'has-success': contacteForm.controls['subject'].touched && contacteForm.controls['subject'].valid
                         }">
-                            <input formControlName="subject" type="text" class="form-control" id="subject" placeholder="Assumpte"
+                            <input formControlName="subject" type="text" class="form-control" id="subject" placeholder="Asunto"
                             [ngClass]="{'form-control-success': contacteForm.controls['subject'].touched && contacteForm.controls['subject'].valid,
                             'form-control-danger': contacteForm.controls['subject'].touched && !contacteForm.controls['subject'].valid}">
-                            <div class="form-control-feedback" *ngIf="!contacteForm.controls['subject'].valid && contacteForm.controls['subject'].touched">Aquest email no és vàlid, sisplau revisa les teves dades.</div>
                         </div>
                         <div class="form-group" [ngClass]="{
                             'has-danger':!contacteForm.controls['message'].valid && contacteForm.controls['message'].touched,
@@ -47,10 +46,10 @@
                 </div>
             </div>
             <div class="alert alert-success col-xs-6" role="alert" *ngIf="enviat">
-              <strong>Missatge enviat!</strong>
+              <strong>Mensaje enviado!</strong>
             </div>
             <div class="alert alert-danger col-xs-6" role="alert" *ngIf="error">
-              <strong>El missatge no s'ha pogut enviar.</strong> Per favor, tornar a provar.
+              <strong>El mensaje no se ha podido enviar.</strong> Por favor, vuelve a intentarlo.
             </div>
             <div class="row">
                 <div class="col-md-8">
